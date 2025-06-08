@@ -71,7 +71,18 @@ const Blinking = () => {
     );
   }, []);
 
-  return <div className="ani3  text-lg mt-10">Blinking Animation.</div>;
+  return <div className="ani3 text-lg mt-10">Blinking Animation.</div>;
 };
 
-export { TextSplit, SideSlide, Blinking };
+const FitText = ({ text }: { text: string }) => {
+  return (
+    <div
+      className="font-bold whitespace-nowrap"
+      style={{ fontSize: `calc(${200 / text.length + 0}vw)` }}
+    >
+      {text}
+    </div>
+  );
+};
+
+export { TextSplit, SideSlide, Blinking, FitText };
