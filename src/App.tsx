@@ -5,6 +5,7 @@ import {
   SideSlide,
   Blinking,
   FitText,
+  CounterText,
 } from "./samples/TextAnimation";
 
 import Tutorial from "./samples/Tutorial";
@@ -17,7 +18,8 @@ function App() {
       <TextSplit />
       <SideSlide />
       <Blinking />
-      <FitText text={"Fit Text Animation"} />
+      <FitText />
+      <CounterText />
     </div>
   );
 }
