@@ -127,21 +127,12 @@ const CounterText = () => {
       autoSplit: true,
       mask: "words",
       onSplit: (self) => {
-        gsap.fromTo(
-          self.words,
-          {
-            duration: 2,
-            yPercent: 0,
-            stagger: 0.1,
-            ease: "expo.out",
-          },
-          {
-            duration: 2,
-            yPercent: -80,
-            stagger: 0.1,
-            ease: "expo.out",
-          }
-        );
+        gsap.to(self.words, {
+          duration: 2,
+          yPercent: -80,
+          stagger: 0.1,
+          ease: "expo.out",
+        });
       },
     });
   }, [num, prevNum]);
@@ -160,6 +151,7 @@ const CounterText = () => {
         >
           counter
         </button>
+
         <div className="flex items-center justify-center size-full text-[5rem] font-semibold">
           <p>[</p>
           <div className=" w-[5rem] h-[5rem] flex items-center justify-center ">
