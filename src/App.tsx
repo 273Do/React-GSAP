@@ -12,7 +12,7 @@ import Tutorial from "./samples/Tutorial";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen mx-10">
+    <div className="main-contents flex flex-col items-center justify-center h-screen mx-10">
       {/* <Tutorial />
       <HorizontalScroll /> */}
       <TextSplit />
