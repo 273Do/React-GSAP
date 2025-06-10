@@ -1,9 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
+import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
 import { useState } from "react";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(SplitText, ScrambleTextPlugin);
 
 const TextSplit = () => {
   useGSAP(() => {
@@ -165,4 +166,20 @@ const CounterText = () => {
   );
 };
 
-export { TextSplit, SideSlide, Blinking, FitText, CounterText };
+const ScrambleText = () => {
+  useGSAP(() => {
+    gsap.to(".ani4", {
+      duration: 3,
+      scrambleText: {
+        text: "Scramble Text",
+        chars: "lowerCase",
+        // revealDelay: 0.5,
+        speed: 0.1,
+      },
+    });
+  }, []);
+
+  return <div className="ani4 text-lg"></div>;
+};
+
+export { TextSplit, SideSlide, Blinking, FitText, CounterText, ScrambleText };

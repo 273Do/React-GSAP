@@ -6,6 +6,7 @@ import {
   Blinking,
   FitText,
   CounterText,
+  ScrambleText,
 } from "./samples/TextAnimation";
 
 import Tutorial from "./samples/Tutorial";
@@ -19,6 +20,7 @@ function App() {
       <SideSlide />
       <Blinking />
       <FitText />
+      <ScrambleText />
       <CounterText />
     </div>
   );
